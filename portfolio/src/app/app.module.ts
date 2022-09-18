@@ -1,34 +1,51 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { AboutComponent } from './profile/about/about.component';
-import { ContactComponent } from './profile/contact/contact.component';
-import { EducationComponent } from './profile/education/education.component';
-import { ExperienceComponent } from './profile/experience/experience.component';
-import { FooterComponent } from './profile/footer/footer.component';
-import { HeaderComponent } from './profile/header/header.component';
-import { IntroComponent } from './profile/intro/intro.component';
-import { SkillsComponent } from './profile/skills/skills.component';
+import { RouterModule, Routes, ExtraOptions } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { IntroComponent } from './intro/intro.component';
+import { SkillsComponent } from './skills/skills.component';
+import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
+
+
+
+
+// const routes: Routes = [
+//   {
+//     path: '',
+//     component: ProfileComponent
+//   }
+// ];
+
+// const config: ExtraOptions = {
+//   useHash: true,
+// };
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
+    IntroComponent,
+    SkillsComponent,
+    HeaderComponent,
     AboutComponent,
     ContactComponent,
     EducationComponent,
     ExperienceComponent,
-    FooterComponent,
-    HeaderComponent,
-    IntroComponent,
-    SkillsComponent
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
